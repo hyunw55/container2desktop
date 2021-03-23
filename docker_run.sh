@@ -1,5 +1,5 @@
 VNC_COL_DEPTH=24
-VNC_RESOLUTION=1920x1080
+VNC_RESOLUTION=2560x1440
 VNC_PW=1234
 
 docker run --privileged -e USER_NAME=$USER -e USER_ID=$(id -u) -e GROUP_ID=$(id -g) \
