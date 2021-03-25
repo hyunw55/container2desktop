@@ -33,15 +33,6 @@ yum -y install mailcap  && \
 yum clean all && \
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 
-### Install xvnc-server & noVNC - HTML5 based VNC viewer
-# tigervnc
-# RUN echo "Install TigerVNC server"  && \
-# wget https://dl.bintray.com/tigervnc/stable/tigervnc-el7.repo -O /etc/yum.repos.d/tigervnc.repo  && \
-# yum -y install tigervnc-server  && \
-# yum clean all
-
-
-
 # install novnc
 RUN echo "Install noVNC - HTML5 based VNC viewer" && \
 mkdir -p $NO_VNC_HOME/utils/websockify && \
@@ -78,6 +69,3 @@ RUN cd /tmp && dpkg -i code-server.deb
 COPY supervisord.conf /etc/supervisor/supervisord.conf
 RUN chmod a+x /startup.sh
 ENTRYPOINT ["/startup.sh"]
-# CMD ["--wait"]
-
- 
