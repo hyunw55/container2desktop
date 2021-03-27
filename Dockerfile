@@ -54,7 +54,6 @@ ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
 RUN chmod +x /bin/tini
 
-# USER 1000
 COPY startup.sh /startup.sh
 RUN yum install -y supervisor
 RUN yum install -y xorg-x11-server-Xvfb
