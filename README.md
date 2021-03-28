@@ -11,3 +11,9 @@ code-server is installed from this git (MIT)
 https://github.com/cdr/code-server.git
 
 And I add some custom feature for startup.sh script (for uid, gid and vscode run)
+
+Just run build script.
+./docker_build.sh
+
+and do run!
+./docker_run.sh
